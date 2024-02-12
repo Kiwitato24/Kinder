@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiwisaur 🥝</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('pixel.jpg'); /* Specify the path to your background image */
+        background-size: cover; /* Cover the entire viewport */
+        background-position: center; /* Center the background image */
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        width: 400px;
+        padding: 40px;
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+        animation: heartbeat 1.5s infinite;
+    }
+    @keyframes heartbeat {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    .message {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #ff4d4d; /* Red color */
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+    }
+    .button {
+        width: 100px;
+        height: 100px;
+        background-color: #ff4d4d;
+        border: none;
+        border-radius: 50%;
+        font-size: 24px;
+        color: #ffffff;
+        cursor: pointer;
+        transition: transform 0.2s;
+        position: relative;
+        overflow: hidden;
+    }
+    .button:hover {
+        transform: scale(1.1);
+    }
+    .emoji {
+        font-size: 40px;
+        margin-bottom: 10px;
+        animation: bounce 1s infinite alternate;
+    }
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+    .heart {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        animation: float 3s infinite ease-in-out;
+    }
+    @keyframes float {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-30px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    .marquee {
+        font-size: 30px;
+        color: #FFFFFF;
+        font-weight: bold; /* Make the text bold */
+        animation: marquee 15s linear infinite;
+        position: absolute;
+        bottom: 20px;
+        left: 20%;
+        transform: translateX(-50%);
+    }
+    @keyframes marquee {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+</style>
+</head>
+<body>
+<div class="card">
+    <p class="message">Spend the love day with me, no other humans mag samok. <i class="emoji far fa-heart"></i></p>
+    <div class="buttons">
+        <button class="button" onclick="showMessage('Yes')"><i class="emoji far fa-thumbs-up"></i></button>
+        <button class="button" onclick="showMessage('No')"><i class="emoji far fa-thumbs-down"></i></button>
+    </div>
+    <div class="heart"></div>
+</div>
+<div class="marquee">PLEASE SAY YES PO SANA MAPILI HUHU</div>
+
+<script>
+function showMessage(answer) {
+    if (answer === 'Yes') {
+        alert("Yeyyy thank you, love. Please eat on time, don't skip nor forget your meals. I'm sorry I can't be near you anytime soon, my love. I promise if magkasama na tayo, aalagaan kita palagi and I'll give you the best cuddles. I love you so much. Ikaw parin nakikita ko at gusto ko makita palagi. Uwi ka agad para make love tayo, love day naman eh hahaha. Happy Valentine's Day, Pretty Girl. 🥝");
+    } else {
+        alert("Ay okay sige. Look oh, I'm sad na. 🥺");
+    }
+}
+</script>
+</body>
+</html>
